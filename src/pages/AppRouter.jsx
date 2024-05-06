@@ -15,9 +15,9 @@ const AppRouter = () => {
       <Routes>
         <Route index element={<Page />} />
         <Route path="accueil" element={<Page />} />
-        <Route path='apropos' element={<About />}/>
-        <Route path='items/:itemId' element={<SingleItem />}/>
-        <Route path='*' element={<Error />}/>
+        <Route path='apropos' element={<About />} />
+        <Route path='items/:itemId' element={<SingleItem />} />
+        <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
     </Router>

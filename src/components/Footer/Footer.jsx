@@ -1,10 +1,12 @@
 import React from 'react'
-import "./Footer.scss"
+import styles from "./Footer.module.scss";
+import logoWhite from "../../images/logo-white.webp"
 
 const Footer = () => {
   return (
-    <footer className='footer'>
-        Footer
+    <footer className={styles.footer}>
+        <img src={logoWhite}/>
+        <span>© 2020 Kasa. All rights reserved</span>
     </footer>
   )
 }

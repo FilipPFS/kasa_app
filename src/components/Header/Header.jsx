@@ -1,18 +1,21 @@
 import React from 'react'
 import logo from "../../images/logo.webp"
-import { Link } from 'react-router-dom';
-import "./Header.scss";
+import { Link, useLocation } from 'react-router-dom';
+import styles from "./Header.module.scss"
 
 const Header = () => {
+
+  const location = useLocation();
+  
   return (
-    <header className='header'>
-        <img className="logo" src={logo}/>
-        <nav>
-            <ul>
-                <Link>Accueil</Link>
-                <Link>A Propos</Link>
-            </ul>
-        </nav>
+    <header className={styles.header}>
+      <img className={styles.logo} src={logo} />
+      <nav>
+        <ul>
+          <Link to="/accueil" className={location.pathname === '/accueil' ? styles.active : ''}>Accueil</Link>
+          <Link to="/apropos" className={location.pathname === '/apropos' ? styles.active : ''}>A Propos</Link>
+        </ul>
+      </nav>
     </header>
   )
 }
