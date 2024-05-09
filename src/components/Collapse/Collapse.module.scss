@@ -1,44 +1,57 @@
+@import "../../Styles/Animations.scss";
+
 .collapse {
 
+  display: flex;
+  flex-direction: column;
+
+  .container {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    padding: 10px;
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        background-color: red;
-        padding: 10px;
-
-        h3 {
-            margin: 0;
-            padding: 0;
-            color: white;
-        }
-
-        .icon {
-            color: white;
-            height: 30px;
-            width: 30px;
-        }
-
-        .rotate {
-            animation: rotateIcon 0.5s linear;
-          }
-
-        @keyframes rotateIcon {
-            from {
-              transform: rotate(180deg); 
-            }
-            to {
-              transform: rotate(0deg);
-            }
-          }
+    h3 {
+      margin: 0;
+      padding: 0;
+      color: white;
     }
 
-    .desc {
-        align-self: center;
-        font-size: 19px;
+    .icon {
+      color: white;
+      height: 30px;
+      width: 30px;
     }
+
+    .rotated {
+      animation: rotateIconBack 0.3s linear;
+    }
+
+    .rotatedBack {
+      animation: rotateIcon 0.3s linear;
+    }
+  }
+
+  .desc {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 19px;
+    background-color: rgb(252, 249, 249);
+
+    &.descOpen {
+      opacity: 1;
+      animation: slideFromTop 0.6s ease;
+      padding: 20px;
+    }
+
+    &.descClosed {
+      opacity: 0;
+      animation: slideToTop 0.5s ease;
+      padding: 20px;
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
 
 }

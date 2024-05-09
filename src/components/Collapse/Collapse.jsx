@@ -5,24 +5,26 @@ import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
 const Collapse = ({ title, desc }) => {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [isRotating, setIsRotating] = useState(false);
+    const [rotated, setRotated] = useState(false);
+    const [clicked, setClicked] = useState(0);
 
     const handleCollapseClick = () => {
-        setIsRotating(prevRotating => !prevRotating);
+        setRotated(!isOpen);
+        setClicked(prevClicked => prevClicked + 1);
         setIsOpen(prevOpen => !prevOpen);
     };
+
+    console.log("Clicked", clicked)
 
     return (
         <div className={styles.collapse}>
             <div className={styles.container}>
                 <h3 className={styles.title}>{title}</h3>
-                <span className={`${styles.icon} ${isRotating && styles.rotate}`} onClick={handleCollapseClick}>
+                <span className={`${styles.icon} ${rotated ? styles.rotated : clicked && styles.rotatedBack}`} onClick={handleCollapseClick}>
                     {!isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
                 </span>
             </div>
-            {isOpen && (
-                <div className={styles.desc}>{desc}</div>
-            )}
+            <div className={`${styles.desc} ${isOpen ? styles.descOpen : clicked && styles.descClosed}`}>{desc}</div>
         </div>
     )
 }
