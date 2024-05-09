@@ -12,3 +12,14 @@
         border-radius: 25px;
     }
 }
+
+@mixin arrowSliderImg {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    color: rgb(255, 255, 255);
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -10,16 +10,17 @@ const About = () => {
   return (
     <main className={styles.main}>
       <div className={styles.imgContainer}>
-        <img src={nature} alt="La nature"/>
+        <img src={nature} alt="La nature" />
       </div>
-      
+
       <div className={styles.collapses}>
         {items.map((item) => {
           return (
-            <Collapse  
-              id = {item.id}
-              title = {item.title}
-              desc = {item.desc}
+            <Collapse
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              desc={item.desc}
             />
           )
         })}

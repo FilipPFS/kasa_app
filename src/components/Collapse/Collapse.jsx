@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from "./Collapse.module.scss";
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
 
-const Collapse = ({ title, desc }) => {
+const Collapse = ({ title, desc, id }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [rotated, setRotated] = useState(false);
