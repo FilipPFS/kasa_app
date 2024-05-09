@@ -9,12 +9,10 @@ const Collapse = ({ title, desc }) => {
     const [clicked, setClicked] = useState(0);
 
     const handleCollapseClick = () => {
-        setRotated(!isOpen);
+        setRotated(!rotated);
         setClicked(prevClicked => prevClicked + 1);
         setIsOpen(prevOpen => !prevOpen);
     };
-
-    console.log("Clicked", clicked)
 
     return (
         <div className={styles.collapse}>
@@ -24,7 +22,9 @@ const Collapse = ({ title, desc }) => {
                     {!isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
                 </span>
             </div>
-            <div className={`${styles.desc} ${isOpen ? styles.descOpen : clicked && styles.descClosed}`}>{desc}</div>
+            {isOpen && (
+                <div className={styles.desc}>{desc}</div>
+            )}
         </div>
     )
 }
