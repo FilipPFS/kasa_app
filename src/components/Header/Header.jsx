@@ -9,10 +9,10 @@ const Header = () => {
   
   return (
     <header className={styles.header}>
-      <img className={styles.logo} src={logo} />
+      <img className={styles.logo} src={logo} alt='Logo du site'/>
       <nav>
         <ul>
-          <Link to="/accueil" className={location.pathname === '/accueil' ? styles.active : ''}>Accueil</Link>
+          <Link to="/accueil" className={location.pathname === '/' || location.pathname === '/accueil' ? styles.active : ''}>Accueil</Link>
           <Link to="/apropos" className={location.pathname === '/apropos' ? styles.active : ''}>A Propos</Link>
         </ul>
       </nav>

@@ -5,7 +5,7 @@ import logoWhite from "../../images/logo-white.webp"
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-        <img src={logoWhite}/>
+        <img src={logoWhite} alt='Logo du site'/>
         <span>© 2020 Kasa. All rights reserved</span>
     </footer>
   )

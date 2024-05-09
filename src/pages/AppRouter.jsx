@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from '../components/Header/Header';
-import Page from './Page';
 import Error from './Error';
-import About from './About';
 import SingleItem from './SingleItem';
 import Footer from '../components/Footer/Footer';
+import Page from './Accueil/Page';
+import About from './About/About';
 
 
 const AppRouter = () => {
