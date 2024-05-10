@@ -26,7 +26,7 @@ const Pictures = ({ pictures }) => {
                 <button className={styles.left} onClick={previousImage}>
                     <ChevronLeftIcon />
                 </button>}
-            {index < pictures.length ? <img src={pictures[index]} /> : setIndex(0)}
+            {index < pictures.length ? <img src={pictures[index]} alt='...'/> : setIndex(0)}
             {pictures.length > 1 && <button className={styles.right} onClick={nextImage}><ChevronRightIcon /></button>}
             <span className={styles.text}>{index + 1}/{pictures.length}</span>
         </div>

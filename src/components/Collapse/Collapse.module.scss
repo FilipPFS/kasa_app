@@ -1,4 +1,5 @@
 @import "../../Styles/Animations.scss";
+@import "../../Styles/App.scss";
 
 .collapse {
 
@@ -9,7 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
+    background-color: $redColor;
+    border-radius: 10px;
     padding: 10px;
 
     h3 {

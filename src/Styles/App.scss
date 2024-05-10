@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+$redColor : rgba(255, 96, 96, 1);
+
 * {
     box-sizing: border-box;
     font-family: "Montserrat";
@@ -18,5 +20,9 @@ body {
 
 header, main {
     padding: 0 100px;
+}
+
+main {
+    margin-bottom: 20px;
 }
 
