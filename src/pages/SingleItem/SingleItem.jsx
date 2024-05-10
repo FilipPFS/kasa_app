@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import data from "../../data.json";
 import Pictures from '../../components/Pictures/Pictures';
 import Stars from '../../components/Stars/Stars';
@@ -9,8 +9,14 @@ import Collapse from '../../components/Collapse/Collapse';
 const SingleItem = () => {
 
     const { itemId } = useParams();
-    const selectedItem = data.filter(item => item.id === itemId)
-    const singleItem = selectedItem[0];
+    const selectedItem = data.find(item => item.id === itemId)
+    console.log("Selected Item", selectedItem);
+
+    if (!selectedItem) {
+        return <Navigate to="*" replace />;
+      }
+
+    const singleItem = selectedItem;
     const pictures = singleItem.pictures;
 
     return (
