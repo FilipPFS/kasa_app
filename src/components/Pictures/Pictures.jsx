@@ -4,8 +4,6 @@ import styles from "./Pictures.module.scss";
 
 const Pictures = ({ pictures }) => {
 
-    console.log(pictures);
-
     const [index, setIndex] = useState(0);
 
     function previousImage() {
@@ -28,7 +26,7 @@ const Pictures = ({ pictures }) => {
                 </button>}
             {index < pictures.length ? <img src={pictures[index]} alt='...'/> : setIndex(0)}
             {pictures.length > 1 && <button className={styles.right} onClick={nextImage}><ChevronRightIcon /></button>}
-            <span className={styles.text}>{index + 1}/{pictures.length}</span>
+            {pictures.length > 1 && <span className={styles.text}>{index + 1}/{pictures.length}</span>}
         </div>
     )
 }

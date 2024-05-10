@@ -10,7 +10,6 @@ const SingleItem = () => {
 
     const { itemId } = useParams();
     const selectedItem = data.find(item => item.id === itemId)
-    console.log("Selected Item", selectedItem);
 
     if (!selectedItem) {
         return <Navigate to="*" replace />;
@@ -28,16 +27,16 @@ const SingleItem = () => {
                 <section className={styles.firstInfo}>
                     <span className={styles.title}>{singleItem.title}</span>
                     <span className={styles.location}>{singleItem.location}</span>
-                    <div className={styles.tags}>{singleItem.tags.map((tag) => {
+                    <div className={styles.tags}>{singleItem.tags.map((tag, index) => {
                         return (
-                            <span className={styles.singleTag}>{tag}</span>
+                            <span className={styles.singleTag} key={index}>{tag}</span>
                         )
                     })}</div>
                 </section>
                 <section className={styles.secondInfo}>
                     <div className={styles.userInfo}>
                         <span className={styles.hostName}>{singleItem.host.name}</span>
-                        <img src={singleItem.host.picture} alt='Profile picture' />
+                        <img src={singleItem.host.picture} alt='Profile avatar' />
                     </div>
                     <Stars rating={singleItem.rating} />
                 </section>
@@ -51,7 +50,7 @@ const SingleItem = () => {
                 <div className={styles.equipCollapse}>
                     <Collapse
                         title={"Equipements"}
-                        desc={singleItem.equipments.map((item) => <p>{item}</p>)}
+                        desc={singleItem.equipments.map((item, index) => <p key={index}>{item}</p>)}
                     />
                 </div>
             </div>
