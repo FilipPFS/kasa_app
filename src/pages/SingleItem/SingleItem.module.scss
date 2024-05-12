@@ -88,4 +88,72 @@
             width: 47%;
         }
     }
+
+    @media (max-width: 750px) {
+
+        .postInfo {
+            flex-direction: column;
+
+            .firstInfo {
+                flex-direction: column;
+                gap: 8px;
+
+                .title {
+                    font-size: 22px;
+                }
+
+                .tags {
+                    gap: 10px;
+                    margin-top: 5px;
+    
+                    .singleTag {
+                        padding: 3px 25px;
+                        font-weight: 600;
+                        border-radius: 5px;
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .secondInfo {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0;
+                margin-top: 10px;
+        
+                .userInfo {
+                    align-items: center;
+                    gap: 15px;
+            
+                    .hostName {
+                        width: 70px;
+                        font-size: 15px;
+                        text-align: center;
+                    }
+            
+                    img {
+                        height: 50px;
+                    }
+                }
+            }
+        }
+
+        .postCollapses {
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+    
+            .descCollapse {
+                width: 100%; 
+            }
+    
+            .equipCollapse {
+                width: 100%;
+            }
+        }
+    }
+
+
 }

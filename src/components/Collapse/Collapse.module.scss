@@ -42,4 +42,10 @@
     animation: slideFromTop 0.6s ease;
   }
 
+  @media (max-width: 750px) {
+    .container {
+      height: 40px;
+    }
+  }
+
 }
