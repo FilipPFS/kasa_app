@@ -6,7 +6,6 @@ import Collapse from '../../components/Collapse/Collapse';
 
 const About = () => {
 
-
   return (
     <main className={styles.main}>
       <div className={styles.imgContainer}>

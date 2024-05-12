@@ -1,11 +1,13 @@
 @import "../../Styles/Mixins.scss";
 
 .main {
-    @include mainImageContainer();
-
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    .imgContainer {
+        @include mainImageContainer();
+    }
 
     .collapses {
         display: flex;
@@ -13,4 +15,5 @@
         gap: 25px;
         margin-bottom: 25px;
     }
+
 }

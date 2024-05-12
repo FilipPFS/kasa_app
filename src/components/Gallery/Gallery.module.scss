@@ -8,3 +8,10 @@
     border-radius: 25px;
 }
 
+@media (max-width: 750px) {
+    .container {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
