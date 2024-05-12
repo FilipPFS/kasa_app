@@ -15,7 +15,6 @@ body {
 .App {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 100vh;
 }
 
@@ -24,6 +23,7 @@ header, main {
 }
 
 main {
+    flex: 1;
     margin-bottom: 20px;
 }
 
@@ -32,4 +32,8 @@ main {
     header, main {
         padding: 0 20px;
     };
+
+    main {
+        margin-bottom: 20px;
+    }
 }

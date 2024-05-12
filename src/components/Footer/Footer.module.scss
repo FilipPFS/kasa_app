@@ -7,6 +7,18 @@
     background-color: black;
     padding: 30px;
     color: white;
+
+    @media (max-width: 750px) {
+        padding: 50px;
+        gap: 15px;
+        margin: 0;
+        margin-top: auto;
+
+        .desc {
+            width: 50%;
+            text-align: center;
+        }
+    }
 }
 
 .footer img {
