@@ -24,4 +24,9 @@
         color: black;
         font-weight: 500;
     }
+
+    @media (max-width: 750px) {
+        gap: 40px;
+        text-align: center;
+    }
 }
