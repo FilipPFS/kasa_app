@@ -47,5 +47,21 @@ $radius: 25px;
             left: 20%;
             transform: translate(-20%, -50%);
         }
+
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 35px 30px;
+    gap: 20px;
+    background-color: rgba(246, 246, 246, 1);
+    border-radius: 25px;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+        padding: 0;
     }
 }
