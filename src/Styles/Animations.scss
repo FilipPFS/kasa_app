@@ -33,10 +33,12 @@
 @keyframes slideToTop {
     from {
       transform: translateY(0);
+      padding: 20px;
       opacity: 1;
     }
     to {
-      transform: translateY(-100%);
+      transform: translateY(-150%);
+      padding: 0;
       opacity: 0;
     }
   }

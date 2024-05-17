@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./Collapse.module.scss";
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
 
@@ -22,10 +22,9 @@ const Collapse = ({ title, desc, id }) => {
                     {!isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
                 </span>
             </div>
-            {isOpen && (
-                <div className={styles.desc}>{desc}</div>
-            )}
+            <div className={`${clicked && styles.desc} ${!isOpen ? clicked && styles.notDesc : ''}`}>{isOpen && desc}</div>
         </div>
+
     )
 }
 

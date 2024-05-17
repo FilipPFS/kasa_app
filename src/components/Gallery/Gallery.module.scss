@@ -1,9 +1,9 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 35px 30px;
-    gap: 30px;
+    gap: 20px;
     background-color: rgba(246, 246, 246, 1);
     border-radius: 25px;
 }
