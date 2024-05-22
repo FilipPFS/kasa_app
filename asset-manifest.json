@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/FilipPFS/kasa_app/static/css/main.3eac0388.css",
-    "main.js": "/FilipPFS/kasa_app/static/js/main.73c6645c.js",
-    "static/media/nature.webp": "/FilipPFS/kasa_app/static/media/nature.83984bae1316848b3a18.webp",
-    "static/media/home-img.webp": "/FilipPFS/kasa_app/static/media/home-img.bc1a5cd938df72a5e1d9.webp",
-    "static/media/logo.webp": "/FilipPFS/kasa_app/static/media/logo.1a65b9721a6afd406962.webp",
-    "static/media/logo-white.webp": "/FilipPFS/kasa_app/static/media/logo-white.7853db238516eae8a304.webp",
-    "index.html": "/FilipPFS/kasa_app/index.html",
-    "main.3eac0388.css.map": "/FilipPFS/kasa_app/static/css/main.3eac0388.css.map",
-    "main.73c6645c.js.map": "/FilipPFS/kasa_app/static/js/main.73c6645c.js.map"
+    "main.css": "/kasa_app/static/css/main.3eac0388.css",
+    "main.js": "/kasa_app/static/js/main.5701065e.js",
+    "static/media/nature.webp": "/kasa_app/static/media/nature.83984bae1316848b3a18.webp",
+    "static/media/home-img.webp": "/kasa_app/static/media/home-img.bc1a5cd938df72a5e1d9.webp",
+    "static/media/logo.webp": "/kasa_app/static/media/logo.1a65b9721a6afd406962.webp",
+    "static/media/logo-white.webp": "/kasa_app/static/media/logo-white.7853db238516eae8a304.webp",
+    "index.html": "/kasa_app/index.html",
+    "main.3eac0388.css.map": "/kasa_app/static/css/main.3eac0388.css.map",
+    "main.5701065e.js.map": "/kasa_app/static/js/main.5701065e.js.map"
   },
   "entrypoints": [
     "static/css/main.3eac0388.css",
-    "static/js/main.73c6645c.js"
+    "static/js/main.5701065e.js"
   ]
 }
